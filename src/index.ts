@@ -17,7 +17,7 @@ fs.readFile('./events.json', 'utf8', (err, jsonString) => {
     return
   }
   try {
-    const inputFile: InputFile = JSON.parse(jsonString)
+    const inputFile = JSON.parse(jsonString)
     if (inputFile.length) createNewArray(inputFile)
     else {
       console.log("Empty JSON data!")
